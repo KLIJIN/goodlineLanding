@@ -149,24 +149,27 @@
         <div class="buying__item">
           <img src="./images/grid/cam1.svg" alt="grid1" style="width: 40px; height: 87px;">
           <div class="buying__text"> Покупка</div>
+          <div class="buying__sh"></div>
         </div>
 
         <div class="buying__item">
           <img src="./images/grid/cam2.svg" alt="grid1" style="width: 109.25px; height: 74px;">
           <div class="buying__text"> Рассрочка</div>
+          <div class="buying__sh"></div>
         </div>
 
         <div class="buying__item">
           <div class="buying__cam3">
             <div><img src="./images/grid/Group 3.svg" alt="grid1" style="width: 214px; height: 163px;"> </div>
           </div>
+          <div class="buying__sh"></div>
         </div>
 
         <div class="buying__item">
           <div class="buying__cam4">
             <img src="./images/grid/Group 38.svg" alt="grid1" style="width: 213px; height: 174.85px;">
           </div>
-
+          <div class="buying__sh"></div>
         </div>
       </div>
     </div>
@@ -177,9 +180,13 @@
     <div class="formTel">
       <form class="formTel__form" action="http://jsonplaceholder.typicode.com/posts" method="POST">
         <div class="formTel__title"> Оставьте заявку, и мы позвоним вам в ближайшее время </div>
-        <input type="tel" minlength="10" maxlength="16" class="formTel__input" name="phone" id="phone"
-          placeholder="+7 ___ ___ ____"> </input>
-        <label class="formTel__label" for="phone"> <span> Контактный телефон</span> </label>
+        <input type="tel" maxlength="16" class="formTel__input" name="phone" id="phone" placeholder="+7 ___ ___ ____">
+        </input>
+        <label class="formTel__label" for="phone">
+          <img class="formTel__danger" src="./images/danger.svg" alt="danger">
+          <span class="message"> Контактный телефон</span>
+
+        </label>
 
         <button class="formTel__button" type="submit">
           <div class="formTel__bg1">

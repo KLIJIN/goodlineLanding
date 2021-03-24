@@ -519,6 +519,22 @@ body {
   left: 0px;
 }
 
+.buying__sh {
+  z-index: -1;
+  position: absolute;
+  width: 140px;
+  height: 214px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#8cb928), to(#45ae4d));
+  background: linear-gradient(180deg, #8cb928 0%, #45ae4d 100%);
+  -webkit-box-shadow: 0px 25px 100px #48ae4b;
+          box-shadow: 0px 25px 100px #48ae4b;
+  border-radius: 18px;
+}
+
 .containerElement {
   position: relative;
   width: 100%;
@@ -561,14 +577,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.formTel__form input:focus {
-  border-color: green;
-}
-
-.formTel__form input:required:valid {
-  border-color: green;
+  outline: none;
 }
 
 .formTel__title {
@@ -587,6 +596,7 @@ body {
   height: 60px;
   border: 3px solid #dae0e5;
   border-radius: 4px;
+  outline: none;
   font-size: 27px;
   font-weight: 700;
   line-height: 31.64px;
@@ -594,7 +604,11 @@ body {
 }
 
 .formTel__input:focus {
-  border: 3px solid #dae0e5;
+  background: #ffffff;
+  border: 3px solid #47b247;
+  -webkit-box-shadow: 0px 0px 24px rgba(0, 152, 16, 0.25), 0px 24px 24px rgba(0, 152, 16, 0.25);
+          box-shadow: 0px 0px 24px rgba(0, 152, 16, 0.25), 0px 24px 24px rgba(0, 152, 16, 0.25);
+  border-radius: 4px;
 }
 
 .formTel__label {
@@ -603,6 +617,23 @@ body {
   font-weight: 400;
   line-height: 21.09px;
   color: #dae0e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 11px;
+}
+
+.formTel__danger {
+  display: none;
+  width: 21px;
+  height: 21px;
 }
 
 .formTel__button {
