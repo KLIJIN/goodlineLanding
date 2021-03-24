@@ -5,6 +5,12 @@ const camClose = document.querySelector(".cam__close")
 const camCloseR = document.querySelector(".cam__close--right")
 const form = document.querySelector(".formTel__form")
 
+const myPhone = document.getElementById('phone');
+const message = document.querySelector('.message')
+const danger = document.querySelector(".formTel__danger")
+
+const formSuccess = document.querySelector(".formTel__success")
+
 
 camClose.addEventListener("click", () => closeBar())
 camCloseR.addEventListener("click", () => closeBar())
@@ -56,18 +62,17 @@ let handler = () => {
 
 
 
-form.addEventListener("submit", event => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  ValidPhone()
+  const myPhoneValue = document.getElementById('phone').value;
+
+  if (ValidPhone(myPhoneValue)) {
+    fetchingData()
+  }
 })
 
-
-const ValidPhone = () => {
+const ValidPhone = (myPhoneValue) => {
   const regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
-  let myPhoneValue = document.getElementById('phone').value;
-  let myPhone = document.getElementById('phone');
-  const message = document.querySelector('.message')
-  const danger = document.querySelector(".formTel__danger")
 
   let valid = regex.test(myPhoneValue);
   if (!valid) {
@@ -82,4 +87,28 @@ const ValidPhone = () => {
     danger.style.display = "none";
   }
   return valid;
-}  
+}
+
+
+const fetchingData = async () => {
+  let formData = new FormData(form);
+
+  let response = await fetch('http://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: formData
+  });
+
+  let result = await response.json();
+  console.log(result);
+  console.log(response.status);
+
+  if (response.status > 200 && response.status < 300) {
+    formSuccess.style.display = "block";
+  }
+
+  // Список пар ключ/значение
+  for (let [name, value] of formData) {
+    console.log(`"${name}": ${value}`); // key1=value1, потом key2=value2
+  }
+  form.reset();
+}
