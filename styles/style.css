@@ -26,7 +26,7 @@ body {
   height: 332px;
 }
 
-.twoCams {
+.mt103 {
   margin-top: 103px;
   position: relative;
 }
@@ -38,12 +38,6 @@ body {
 
 .mt20 {
   height: 60px;
-}
-
-.container {
-  width: 100%;
-  max-width: 963px;
-  margin: 0 auto;
 }
 
 .preview {
@@ -58,6 +52,7 @@ body {
   border: 1px solid #dae0e5;
   border-radius: 18px;
   background-image: url("../images/logo/prew-large.png");
+  background-repeat: no-repeat;
 }
 
 .preview .first {
@@ -125,7 +120,6 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 870px;
-  min-width: 870px;
   height: 619px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -147,6 +141,7 @@ body {
   border-radius: 18px;
   background: -webkit-gradient(linear, left top, left bottom, from(#8cb928), to(#45ae4d));
   background: linear-gradient(180deg, #8cb928 0%, #45ae4d 100%);
+  cursor: pointer;
 }
 
 .cam__item img {
@@ -165,7 +160,7 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 314px;
-  height: 100%;
+  height: 95%;
   -webkit-box-shadow: 0px 25px 100px #48ae4b;
           box-shadow: 0px 25px 100px #48ae4b;
 }
@@ -224,6 +219,7 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 1;
+  cursor: pointer;
 }
 
 .cam__close img {
@@ -234,7 +230,7 @@ body {
   left: 17.68px;
 }
 
-.cam__close-right {
+.cam__close--right {
   width: 52px;
   height: 52px;
   background: -webkit-gradient(linear, left top, left bottom, from(#8cb928), to(#45ae4d));
@@ -246,9 +242,10 @@ body {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 1;
+  cursor: pointer;
 }
 
-.cam__close-right img {
+.cam__close--right img {
   width: 16.63px;
   height: 16.63px;
   position: absolute;
@@ -396,7 +393,6 @@ body {
 
 .cam__buttonText {
   width: 130px;
-  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
@@ -409,7 +405,7 @@ body {
   color: #313334;
 }
 
-.buing {
+.buying {
   margin-top: 103px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -421,9 +417,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.buing__title {
+.buying__title {
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
   font-size: 36px;
@@ -431,7 +430,7 @@ body {
   line-height: 42px;
 }
 
-.buing__grid {
+.buying__grid {
   margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,7 +443,7 @@ body {
   gap: 15px;
 }
 
-.buing__item {
+.buying__item {
   height: 213.7px;
   width: 213.7px;
   background: -webkit-gradient(linear, left top, left bottom, from(#8cb928), to(#45ae4d));
@@ -463,14 +462,14 @@ body {
   position: relative;
 }
 
-.buing__item img {
+.buying__item img {
   position: absolute;
   top: 50px;
   width: 38.78px;
   height: 59.47px;
 }
 
-.buing__text {
+.buying__text {
   position: absolute;
   bottom: 30px;
   color: white;
@@ -480,7 +479,7 @@ body {
   text-align: center;
 }
 
-.buing__cam3 {
+.buying__cam3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -500,7 +499,7 @@ body {
   left: 0px;
 }
 
-.buing__cam4 {
+.buying__cam4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -564,9 +563,16 @@ body {
           align-items: center;
 }
 
+.formTel__form input:focus {
+  border-color: green;
+}
+
+.formTel__form input:required:valid {
+  border-color: green;
+}
+
 .formTel__title {
   width: 360px;
-  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 20px;
   font-weight: 700;
@@ -581,15 +587,17 @@ body {
   height: 60px;
   border: 3px solid #dae0e5;
   border-radius: 4px;
-  font-family: "Roboto", sans-serif;
   font-size: 27px;
   font-weight: 700;
   line-height: 31.64px;
   vertical-align: middle;
 }
 
+.formTel__input:focus {
+  border: 3px solid #dae0e5;
+}
+
 .formTel__label {
-  font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
@@ -750,7 +758,6 @@ body {
   position: absolute;
   top: 60px;
   left: 142px;
-  font-family: "Roboto", sans-serif;
   color: white;
   text-align: center;
   font-size: 18px;
@@ -764,7 +771,6 @@ body {
   left: 142px;
   width: 386px;
   height: 90px;
-  font-family: "Roboto", sans-serif;
   color: white;
   text-align: left;
   font-size: 20px;
@@ -802,66 +808,6 @@ body {
   bottom: 20px;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
-}
-
-@media (max-width: 960px) {
-  .preview {
-    max-width: 375px;
-    height: 208px;
-    margin-top: 0;
-    left: 0;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    border-radius: 0px;
-    background-image: none;
-  }
-  .preview__title {
-    position: absolute;
-    top: 18.63px;
-    left: 44px;
-    width: 80px;
-    height: 23px;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  .preview__text {
-    position: absolute;
-    left: 46px;
-    bottom: 46px;
-    width: 262px;
-    height: 141px;
-    color: #2e3134;
-  }
-  .preview__text p {
-    font-weight: 700;
-    font-size: 12px;
-    width: 100%;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 23px;
-  }
-  .preview .one {
-    position: absolute;
-    top: 14px;
-    left: 18.35px;
-  }
-  .preview .two {
-    position: absolute;
-    top: 21.62px;
-    left: 14px;
-    height: 22.58px;
-  }
-  .preview .three {
-    position: absolute;
-    top: 26.79px;
-    left: 19.71px;
-    height: 22.58px;
-  }
-  .preview .four {
-    position: absolute;
-    top: 21.62px;
-    left: 14px;
-    height: 22.58px;
-  }
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
