@@ -313,14 +313,14 @@ body {
   left: 90px;
   width: 210px;
   height: 458px;
-  background-image: url(/images/камераОбработка.png);
+  background-image: url("../images/камераОбработка.png");
 }
 
 .cam__sliderTelImage {
   position: absolute;
   top: 42px;
   right: 63px;
-  background-image: url(/images/Смартфон.png);
+  background-image: url("../images/Смартфон.png");
   width: 263px;
   height: 534px;
 }
