@@ -93,7 +93,7 @@ const ValidPhone = (myPhoneValue) => {
 const fetchingData = async () => {
   let formData = new FormData(form);
 
-  let response = await fetch('http://jsonplaceholder.typicode.com/posts', {
+  let response = await fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     body: formData
   });
