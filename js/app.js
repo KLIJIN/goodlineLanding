@@ -25,12 +25,12 @@ modalBtn.forEach(item => {
   item.addEventListener("click", event => {
     event.stopPropagation();
     if (event.currentTarget === modalBtn[0]) {
-      console.log(modalBtn[1])
+      // console.log(modalBtn[1])
       modalBtn.forEach(item => item.style.display = "none")
       camSliderOne.style.display = "block";
       handler()
     } else if (event.currentTarget === modalBtn[1]) {
-      console.log(modalBtn[0])
+      // console.log(modalBtn[0])
       modalBtn.forEach(item => item.style.display = "none")
       camSliderTwo.style.display = "block";
       handler()
@@ -99,8 +99,8 @@ const fetchingData = async () => {
   });
 
   let result = await response.json();
-  console.log(result);
-  console.log(response.status);
+  console.log("result", result);
+  console.log("Status Code:", response.status);
 
   if (response.status > 200 && response.status < 300) {
     formSuccess.style.display = "block";
