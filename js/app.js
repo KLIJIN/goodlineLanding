@@ -1,7 +1,7 @@
 //Two Cams
 const bigCamItems = document.querySelectorAll(".cam__item")
-const camSliderLeft = document.querySelector(".cam__sliderOne")
-const camSliderRight = document.querySelector(".cam__sliderTwo")
+const popUpLeft = document.querySelector(".cam__sliderOne")
+const popUpRight = document.querySelector(".cam__sliderTwo")
 const closeButtonLeft = document.querySelector(".cam__close")
 const closeButtonRigth = document.querySelector(".cam__close--right")
 //form
@@ -16,30 +16,25 @@ const formSuccess = document.querySelector(".formTel__success")
 closeButtonLeft.addEventListener("click", () => closeBar())
 closeButtonRigth.addEventListener("click", () => closeBar())
 
-const closeBar = () => {
-  bigCamItems.forEach(item => item.style.display = "block")
-  camSliderLeft.style.display = "none";
-  camSliderRight.style.display = "none";
-  document.removeEventListener("click", clickHandler)
-}
 
 bigCamItems.forEach(item => {
   item.addEventListener("click", event => {
     event.stopPropagation();
-    document.addEventListener("click", clickHandler)
+    document.addEventListener("click", clickHandler);//при срабатывании ивента на камере на 27 строке, запускается второй лисенер, уже на весь документ - на закрытие попапа
     bigCamItems.forEach(item => item.style.display = "none")
     if (event.currentTarget === bigCamItems[0]) {
-      camSliderLeft.style.display = "block";
+      popUpLeft.style.display = "block";
     } else if (event.currentTarget === bigCamItems[1]) {
-      camSliderRight.style.display = "block";
+      popUpRight.style.display = "block";
     }
   })
 })
 
+
 const clickHandler = (event) => {
   targetElement = event.target;  // clicked element
   do {
-    if (targetElement == camSliderLeft || targetElement == camSliderRight) {
+    if (targetElement == popUpLeft || targetElement == popUpRight) {
       // This is a click inside. Do nothing, just return.
       console.log("Cliked Inside");
       return;
@@ -50,6 +45,14 @@ const clickHandler = (event) => {
   // This is a click outside.
   console.log("Cliked Outside");
   closeBar();
+}
+
+
+const closeBar = () => {
+  bigCamItems.forEach(item => item.style.display = "block")
+  popUpLeft.style.display = "none";
+  popUpRight.style.display = "none";
+  document.removeEventListener("click", clickHandler) //удаляем второй лисенер со всего документа, первый лисенер на камерах продолжает висеть
 }
 
 // document.addEventListener("click", clickHandler)
