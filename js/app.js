@@ -4,7 +4,7 @@ const popUpLeft = document.querySelector(".cam__sliderOne")
 const popUpRight = document.querySelector(".cam__sliderTwo")
 const closeButtonLeft = document.querySelector(".cam__close")
 const closeButtonRigth = document.querySelector(".cam__close--right")
-//form
+//Form
 const form = document.querySelector(".formTel__form")
 const myPhone = document.getElementById('phone');
 const message = document.querySelector('.message')
