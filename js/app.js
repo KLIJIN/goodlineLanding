@@ -20,7 +20,7 @@ closeButtonRigth.addEventListener("click", () => closeBar())
 bigCamItems.forEach(item => {
   item.addEventListener("click", event => {
     event.stopPropagation();
-    document.addEventListener("click", clickHandler);//при срабатывании ивента на камере на 27 строке, запускается второй лисенер, уже на весь документ - на закрытие попапа
+    document.addEventListener("click", clickHandler);//при срабатывании ивента на камере на 21 строке, запускается второй лисенер, уже на весь документ - на закрытие попапа
     bigCamItems.forEach(item => item.style.display = "none")
     if (event.currentTarget === bigCamItems[0]) {
       popUpLeft.style.display = "block";
