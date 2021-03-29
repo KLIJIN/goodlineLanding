@@ -7,7 +7,7 @@ const closeButtonRigth = document.querySelector(".cam__close--right")
 //Form
 const form = document.querySelector(".formTel__form")
 const myPhone = document.getElementById('phone');
-const message = document.querySelector('.message')
+const message = document.querySelector('.formTel__message')
 const danger = document.querySelector(".formTel__danger")
 
 const formSuccess = document.querySelector(".formTel__success")

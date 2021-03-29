@@ -13,30 +13,32 @@
 <body>
 
   <!-- Превью -->
-  <div class="preview">
-    <div class="preview__logo"><img src="./images/logo/ic-logo.png" alt="logo">
-    </div>
-    <div class="preview__title"> Датчик спокойствия </div>
+  <div class="containerElement mt-preview">
+    <div class="preview">
+      <div class="preview__logo"><img src="./images/logo/ic-logo.png" alt="logo">
+      </div>
+      <div class="preview__title"> Датчик спокойствия </div>
 
-    <div class="preview__text">
-      <p>Комплекс из камеры и мобильного приложения, который помогает в любой момент убедиться,
-        что с близкими и домом всё
-        в порядке.</p>
+      <div class="preview__text">
+        <p>Комплекс из камеры и мобильного приложения, который помогает в любой момент убедиться,
+          что с близкими и домом всё
+          в порядке.</p>
+      </div>
     </div>
   </div><!-- //Превью -->
 
   <!-- Пара камер -->
-  <div class="containerElement mt103 ">
+  <div class="containerElement mt-cam">
     <div class="cam">
       <div class="cam__item" id="cam__itemOne">
-        <img src="./images/cam1.png" alt="cam1">
-        <div class="cam__item__shadow"></div>
+        <div class="cam__img"> <img src="./images/cam1.png" alt="cam1"> </div>
+
         <div class="details"> ПОДРОБНЕЕ </div>
       </div>
 
       <div class="cam__item" id="cam__itemTwo">
-        <img src="./images/cam2.png" alt="cam2">
-        <div class="cam__item__shadow"></div>
+        <div class="cam__img"> <img src="./images/cam1.png" alt="cam1"> </div>
+
         <div class="details"> ПОДРОБНЕЕ </div>
       </div>
     </div>
@@ -81,7 +83,7 @@
             <div class="cam__buttonText">Длина кабеля 1.5 метра</div>
           </div>
         </div>
-        <div class="cam__sh"> </div>
+
       </div>
       <div class="cam__close"> <img src="./images/close.svg" alt="1"> </div>
       <div class="cam__sliderCam">
@@ -129,7 +131,7 @@
             <div class="cam__buttonText">Уведомление о приходе «Домашних»</div>
           </div>
         </div>
-        <div class="cam__sh"> </div>
+
       </div>
       <div class="cam__close--right"> <img src="./images/close.svg" alt="1"> </div>
       <div class="cam__sliderTel">
@@ -147,27 +149,23 @@
         <div class="buying__item">
           <img src="./images/grid/cam1.svg" alt="grid1" style="width: 40px; height: 87px;">
           <div class="buying__text"> Покупка</div>
-          <div class="buying__sh"></div>
         </div>
 
         <div class="buying__item">
           <img src="./images/grid/cam2.svg" alt="grid1" style="width: 109.25px; height: 74px;">
           <div class="buying__text"> Рассрочка</div>
-          <div class="buying__sh"></div>
         </div>
 
         <div class="buying__item">
           <div class="buying__cam3">
             <div><img src="./images/grid/Group 3.svg" alt="grid1" style="width: 214px; height: 163px;"> </div>
           </div>
-          <div class="buying__sh"></div>
         </div>
 
         <div class="buying__item">
           <div class="buying__cam4">
             <img src="./images/grid/Group 38.svg" alt="grid1" style="width: 213px; height: 174.85px;">
           </div>
-          <div class="buying__sh"></div>
         </div>
       </div>
     </div>
@@ -182,7 +180,7 @@
         </input>
         <label class="formTel__label" for="phone">
           <img class="formTel__danger" src="./images/danger.svg" alt="danger">
-          <span class="message"> Контактный телефон</span>
+          <span class="formTel__message"> Контактный телефон</span>
 
         </label>
 
@@ -212,7 +210,7 @@
   </div><!-- //Отправить заявку -->
 
   <!-- Отзывы -->
-  <div class="containerElement mt124">
+  <div class="containerElement mt-reviews ">
     <div class="reviews__title">Отзывы</div>
     <div class="reviews__personContainer">
       <div class="reviews__person_one">
@@ -232,7 +230,7 @@
     </div>
   </div><!-- //Отзывы -->
 
-  <div class="containerElement mt20"></div>
+  <div class="containerElement mt-bottom"></div>
 
 
 
